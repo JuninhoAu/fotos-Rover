@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.roverList.observe(this, Observer {
 
+            //Hi
+
             it->        adapter.submitList(it)
 
         })
