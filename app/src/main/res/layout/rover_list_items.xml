@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/cod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="code:"/>
+
+    <TextView
+        android:id="@+id/txtexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="15sp"
+        android:layout_toEndOf="@+id/cod"
+        tools:text="xxxxxx"/>
+
+
+    <TextView
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/txtexto"
+        android:text="Earth Date:"/>
+    <TextView
+        android:id="@+id/tierra_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxx-xx-xx"
+        android:textSize="15sp"
+        android:layout_toEndOf="@id/date_txt"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/camera_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/cod"
+        android:text="Camera Name:"/>
+    <TextView
+        android:id="@+id/camera_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xxxx xxxx"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/cod"
+        android:layout_toEndOf="@id/camera_text"
+        android:layout_marginStart="8dp"/>
+
+</RelativeLayout>

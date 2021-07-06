@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RoverPhotos</string>
+    <string name="text_cod">codigo %s </string>
+
+</resources>
