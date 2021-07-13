@@ -1,6 +1,6 @@
 # App para consumir Api de la Nasa 
 
-Esta es una app desarrollada en kotlin que muestras una lista de items con diferentes fotos tomadas por el  Curiosity, Opportunity y Spirit de la Nasa en marte.
+Esta es una app desarrollada en kotlin que muestras una lista de items con diferentes fotos tomadas por el  Curiosity de la Nasa en marte.
 
 ## Desarrollo  
 
