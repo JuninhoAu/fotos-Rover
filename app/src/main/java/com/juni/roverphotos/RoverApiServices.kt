@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 
 interface RoverApiServices {
-    @GET("photos?sol=1000&page=2&api_key=93k8HC0mO7agDECeHh6ghlSTbR6nbgwcCsUobshS\n")
+    @GET("photos?sol=1000&page=1&api_key=93k8HC0mO7agDECeHh6ghlSTbR6nbgwcCsUobshS\n")
     suspend fun getRoverPhotos(): String
 }
 
