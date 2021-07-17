@@ -17,6 +17,7 @@ import java.lang.ClassCastException
 
 class ListFragment : Fragment() {
 
+    //interface
 
     interface ItemSelectListener{
 
