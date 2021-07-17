@@ -40,20 +40,43 @@ class RoverAdapter:ListAdapter<Photos,RoverAdapter.RoverViewHolder>(DiffCallback
     }
 
     override fun onBindViewHolder(holder: RoverAdapter.RoverViewHolder, position: Int) {
-        val photos=getItem(position)
 
-        holder.txtId.text= photos.id
-        holder.txtDate.text=photos.earth_date
-        holder.txtcamera.text=photos.camera_name
+        val photos=getItem(position)
+        holder.bind(photos)
+
+
 
     }
 
 
-    inner class RoverViewHolder(private val view:View):RecyclerView.ViewHolder(view){
+    inner class RoverViewHolder( private val view:View):RecyclerView.ViewHolder(view){
 
-        val txtId =view.findViewById<TextView>(R.id.txtexto)
-        val txtDate=view.findViewById<TextView>(R.id.tierra_date)
-        val txtcamera=view.findViewById<TextView>(R.id.camera_name)
+        private val txtId =view.findViewById<TextView>(R.id.txtexto)
+        private val txtDate=view.findViewById<TextView>(R.id.tierra_date)
+        private val txtcamera=view.findViewById<TextView>(R.id.camera_name)
+
+        fun bind(photos: Photos){
+
+            txtId.text= photos.id
+            txtDate.text=photos.earth_date
+            txtcamera.text=photos.camera_name
+
+            view.setOnClickListener {
+
+                if (::onItemClickListener.isInitialized){
+
+                    //ejecutar al hacer click
+                    onItemClickListener(photos)
+
+
+                }
+            }
+
+
+        }
+
+
+
 
 
 
