@@ -58,7 +58,9 @@ class MainViewModel:ViewModel() {
 
             val nameCamera=camera.getString("full_name")
 
-            val photos=Photos(id,earthDate,nameCamera)
+            val img_src=photosJsonObjectSon.getString("img_src")
+
+            val photos=Photos(id,earthDate,nameCamera,img_src)
 
             roverList.add(photos)
         }
