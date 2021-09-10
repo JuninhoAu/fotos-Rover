@@ -47,7 +47,7 @@ class PhotosFragment : Fragment() {
 
     fun setPhotos(photos: Photos){
 
-        Log.d("Hol2a",photos.img_src)
+        Log.d("Hol3a",photos.img_src)
 
        // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
         loadingWheel.visibility=View.VISIBLE
