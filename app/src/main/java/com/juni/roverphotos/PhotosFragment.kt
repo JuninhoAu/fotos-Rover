@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -21,6 +22,8 @@ class PhotosFragment : Fragment() {
 
 
     private lateinit var imageView: ImageView
+    private lateinit var loadingWheel: ProgressBar
+
 
 
     override fun onCreateView(
@@ -34,6 +37,7 @@ class PhotosFragment : Fragment() {
 
         //  imageView=rootView.imgRover
         imageView=viewRoot.findViewById(R.id.imgv_rover)
+        loadingWheel=viewRoot.findViewById(R.id.loading_wheel)
 
 
         imageView.setImageURI(Uri.parse("https://lh3.googleusercontent.com/pw/ACtC-3f0oCTWqcLqOb47XI0cxmjWDfjbiLke0maPSPdC4jY_4PKdJIBAyQXV__sYUDbrfRctynBCdAN5selEMQPwOnI_kyioqhpGaqTBTTJP6FFPFF37coJUzb0MP5aSZIhjiXxVLRznFIVw_DbsyJNe1jLS=w1250-h938-no"))
@@ -46,6 +50,8 @@ class PhotosFragment : Fragment() {
        // Log.d("Hola",photos.img_src)
 
        // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
+        loadingWheel.visibility=View.VISIBLE
+
         Glide.with(this).load(photos.img_src).listener(object : RequestListener<Drawable> {
 
             override fun onLoadFailed(e: GlideException?,
@@ -57,6 +63,7 @@ class PhotosFragment : Fragment() {
 
                 showMsg("carga fallida"+e)
                 Log.d("Hola","error:  "+e)
+                loadingWheel.visibility=View.GONE
 
 
 
@@ -70,6 +77,8 @@ class PhotosFragment : Fragment() {
                                          isFirstResource: Boolean): Boolean {
 
 
+
+                loadingWheel.visibility=View.GONE
 
                 return false
             }
