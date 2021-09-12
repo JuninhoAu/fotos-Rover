@@ -49,10 +49,10 @@ class PhotosFragment : Fragment() {
 
        Log.d("holazzzz",photos.img_src)
 
-        Log.d("holazzzz1",photos.img_src)
+        Log.d("holazzzz",photos.img_src)
 
 
-        // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
+       Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
         loadingWheel.visibility=View.VISIBLE
 
         Glide.with(this).load(photos.img_src).listener(object : RequestListener<Drawable> {
