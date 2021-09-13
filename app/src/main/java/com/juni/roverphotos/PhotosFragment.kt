@@ -30,8 +30,6 @@ class PhotosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-    //    val rootView= FragmentPhotosBinding.inflate(inflater)
         val  viewRoot= inflater.inflate(R.layout.fragment_photos, container, false)
 
 
@@ -47,10 +45,6 @@ class PhotosFragment : Fragment() {
 
     fun setPhotos(photos: Photos){
 
-       Log.d("Hola",photos.img_src)
-
-        Log.d("HolaMac",photos.img_src)
-
 
         // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
         loadingWheel.visibility=View.VISIBLE
@@ -65,7 +59,6 @@ class PhotosFragment : Fragment() {
 
 
                 showMsg("carga fallida"+e)
-                Log.d("Hola","error:  "+e)
                 loadingWheel.visibility=View.GONE
 
 
