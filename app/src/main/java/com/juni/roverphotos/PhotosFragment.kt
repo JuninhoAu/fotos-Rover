@@ -45,6 +45,8 @@ class PhotosFragment : Fragment() {
 
     fun setPhotos(photos: Photos){
 
+        Log.d("Hola","Hola probando windows")
+
 
         // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
         loadingWheel.visibility=View.VISIBLE
