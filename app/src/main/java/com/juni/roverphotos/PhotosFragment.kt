@@ -47,6 +47,7 @@ class PhotosFragment : Fragment() {
 
         Log.d("HolaMac","Hola probando macbook")
         Log.d("Hola","Hola probando windows")
+        Log.d("Hola","Hola probando windows")
 
 
         // Toast.makeText(activity,photos.img_src, Toast.LENGTH_SHORT).show()
