@@ -45,6 +45,7 @@ class PhotosFragment : Fragment() {
 
     fun setPhotos(photos: Photos){
 
+        Log.d("HolaMac","Hola probando macbook")
         Log.d("Hola","Hola probando windows")
 
 
