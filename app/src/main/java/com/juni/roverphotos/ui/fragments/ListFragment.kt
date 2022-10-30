@@ -1,4 +1,4 @@
-package com.juni.roverphotos
+package com.juni.roverphotos.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -6,11 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.juni.roverphotos.data.model.Photos
 import com.juni.roverphotos.databinding.FragmentListBinding
 import java.lang.ClassCastException
 
@@ -54,7 +54,7 @@ class ListFragment : Fragment() {
 
         recycler.addItemDecoration(divider)
 
-        val roverAdapter=RoverAdapter()
+        val roverAdapter= RoverAdapter()
 
         recycler.adapter=roverAdapter
 

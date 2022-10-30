@@ -1,10 +1,11 @@
-package com.juni.roverphotos
+package com.juni.roverphotos.ui
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.juni.roverphotos.api.service
+import com.juni.roverphotos.data.model.Photos
 import kotlinx.coroutines.*
 import org.json.JSONObject
 
@@ -60,7 +61,7 @@ class MainViewModel:ViewModel() {
 
             val img_src=photosJsonObjectSon.getString("img_src")
 
-            val photos=Photos(id,earthDate,nameCamera,img_src)
+            val photos= Photos(id,earthDate,nameCamera,img_src)
 
             roverList.add(photos)
         }
